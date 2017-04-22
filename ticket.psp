@@ -1,0 +1,153 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="ticket" %>
+<%@ plsql parameter="p_user" default="NULL" %>
+<%@ plsql parameter="p_movie" default="NULL" %>
+<%@ plsql parameter="p_time" default="NULL" %>
+<%@ plsql parameter="p_submit" default="NULL" %>
+<HTML>
+	<HEAD>
+	     <style>
+           div label input {
+   margin-right:100px;
+}
+body {
+    font-family:sans-serif;
+}
+
+#ck-button {
+
+    margin:2px;
+    background-color:#EFEFEF;
+    border-radius:4px;
+    border:1px solid #D0D0D0;
+    overflow:auto;
+    float:center;
+}
+
+#ck-button label {
+    float:left;
+    width:4.0em;
+}
+
+#ck-button label span {
+    text-align:center;
+    padding:3px 0px;
+    display:block;
+    border-radius:4px;
+}
+
+#ck-button label input {
+    position:absolute;
+    top:-20px;
+}
+
+#ck-button input:hover + span {
+    background-color:#efE0E0;
+}
+
+#ck-button input:checked + span {
+    background-color:#911;
+    color:#fff;
+}
+
+#ck-button input:checked:hover + span {
+    background-color:#c11;
+    color:#fff;
+}
+		
+         .button {
+             background-color: #006400; /* Green */
+             border: none;
+             color: white;
+             padding: 15px 32px;
+             text-align: center;
+             text-decoration: none;
+             display: inline-block;
+             font-size: 16px;
+             margin: 4px 2px;
+             cursor: pointer;
+         }
+             
+         </style>
+         <script>
+              
+          
+          </script>
+		<TITLE>MovieZ Ticket Booking System</TITLE> 
+   <%!
+   i integer:=0;
+   p_a1 varchar2(5);p_a2 varchar2(5);p_a3 varchar2(5);p_a4 varchar2(5);p_a5 varchar2(5);p_a6 varchar2(5);
+   p_b1 varchar2(5);p_b2 varchar2(5);p_b3 varchar2(5);p_b4 varchar2(5);p_b5 varchar2(5);p_b6 varchar2(5);
+   p_b7 varchar2(5);p_b8 varchar2(5);p_b9 varchar2(5);
+   %>
+	</HEAD>
+	<BODY>
+ <%select a1,a2,a3,a4,a5,a6,b1,b2,b3,b4,b5,b6,b7,b8,b9 into p_a1,p_a2,p_a3,p_a4,p_a5,p_a6,p_b1,p_b2,p_b3,p_b4,p_b5,p_b6,p_b7,p_b8,p_b9 from tickets where mname=p_movie and mtime=p_time;%>
+		<FORM ACTION="book" >
+			<CENTER>
+			<div id="ck-button">
+			<TABLE CELLSPACING="2" BORDER="0" >
+			
+				<TR><TD><label>
+				<input type="checkbox" name = "a1" class="check" id = "p_check" value="a1" <%if p_a1 IS NOT NULL then%>checked<%end if;%>><span>A1</span>
+				</label></TD>
+        <TD><label>
+				<input type="checkbox" name = "a2" class="check" id = "p_check" value="a2" <%if p_a2 IS NOT NULL then%>checked<%end if;%>><span>A2</span>
+				</label></TD>
+        <TD><label>
+				<input type="checkbox" name = "a3" class="check" id = "p_check" value="a3" <%if p_a3 IS NOT NULL then%>checked<%end if;%>><span>A3</span>
+				</label></TD>
+        <TD></TD><TD></TD><TD></TD>
+        <TD><label>
+				<input type="checkbox" name = "a4" class="check" id = "p_check" value="a4" <%if p_a4 IS NOT NULL then%>checked<%end if;%>><span>A4</span>
+				</label></TD>
+        <TD><label>
+        <input type="checkbox" name = "a5" class="check" id = "p_check" value="a5" <%if p_a5 IS NOT NULL then%>checked<%end if;%>><span>A5</span>
+				</label></TD>
+				<TD><label>
+				<input type="checkbox" name = "a6" class="check" id = "p_check" value="a6" <%if p_a6 IS NOT NULL then%>checked<%end if;%>><span>A6</span>
+				</label></TD></TR>
+        
+        <TR><TD><label>
+				<input type="checkbox" name = "b1" class="check" id = "p_check" value="b1" <%if p_b1 IS NOT NULL then%>checked<%end if;%>><span>B1</span>
+				</label></TD>
+        <TD><label>
+				<input type="checkbox" name = "b2" class="check" id = "p_check" value="b2" <%if p_b2 IS NOT NULL then%>checked<%end if;%>><span>B2</span>
+				</label></TD>
+        <TD><label>
+				<input type="checkbox" name = "b3" class="check" id = "p_check" value="b3" <%if p_b3 IS NOT NULL then%>checked<%end if;%>><span>B3</span>
+				</label></TD>
+        <TD><label>
+				<input type="checkbox" name = "b4" class="check" id = "p_check" value="b4" <%if p_b4 IS NOT NULL then%>checked<%end if;%>><span>B4</span>
+				</label></TD>
+        <TD><label>
+        <input type="checkbox" name = "b5" class="check" id = "p_check" value="b5" <%if p_b5 IS NOT NULL then%>checked<%end if;%>><span>B5</span>
+				</label></TD>
+				<TD><label>
+				<input type="checkbox" name = "b6" class="check" id = "p_check" value="b6" <%if p_b6 IS NOT NULL then%>checked<%end if;%>><span>B6</span>
+				</label></TD>
+        <TD><label>
+				<input type="checkbox" name = "b7" class="check" id = "p_check" value="b7" <%if p_b7 IS NOT NULL then%>checked<%end if;%>><span>B7</span>
+				</label></TD>
+        <TD><label>
+        <input type="checkbox" name = "b8" class="check" id = "p_check" value="b8" <%if p_b8 IS NOT NULL then%>checked<%end if;%>><span>B8</span>
+				</label></TD>
+				<TD><label>
+				<input type="checkbox" name = "b9" class="check" id = "p_check" value="b9" <%if p_b9 IS NOT NULL then%>checked<%end if;%>><span>B9</span>
+				</label></TD></TR>
+			</TABLE>
+        <input type="hidden" name="p_movie" value="<%=p_movie%>">
+        <input type="hidden" name="p_time" value="<%=p_time%>">
+        <input type="hidden" name="p_user" value="<%=p_user%>">
+      <INPUT TYPE="submit" NAME="p_submit" VALUE="REGISTER"/>
+      
+   
+    
+        	</div>
+        
+      </CENTER>
+      
+      
+		</FORM>
+	</BODY>
+</HTML>

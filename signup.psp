@@ -1,0 +1,18 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="signup" %>
+<HTML>
+	<HEAD>
+		<TITLE>MovieZ Ticket Booking System</TITLE> 
+	</HEAD>
+	<BODY>
+		<FORM ACTION="signup_db" METHOD="post">
+			<CENTER><TABLE CELLSPACING="2" BORDER="0">
+				<TR><TD>NAME:</TD><TD ALIGN="left"><INPUT TYPE="text" SIZE="25" NAME="p_name"/></TD></TR>
+				<TR><TD>USERID:</TD><TD ALIGN="left"><INPUT TYPE="text" SIZE="25" NAME="p_user"/></TD></TR>
+				<TR><TD>PASSWORD:</TD><TD ALIGN="left"><INPUT TYPE="password" SIZE="25" NAME="p_pwd"/></TD></TR>
+				<TR><TD>EMAIL:</TD><TD ALIGN="left"><INPUT TYPE="text" SIZE="25" NAME="p_email"/></TD></TR>
+				<TR><TD><INPUT TYPE="submit" NAME="p_submit" VALUE="REGISTER"/></TD></TR>
+			</TABLE></CENTER>
+		</FORM>
+	</BODY>
+</HTML>

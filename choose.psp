@@ -1,0 +1,30 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="choose" %>
+<%@ plsql parameter="p_user" default="NULL" %>
+<HTML>
+	<HEAD>
+		<TITLE>MovieZ Ticket Booking System</TITLE> 
+	</HEAD>
+	<BODY>
+		<FORM ACTION="ticket" METHOD="post">
+			<CENTER><TABLE CELLSPACING="2" BORDER="0">
+				<TR><TD>Movie:</TD>
+				<TD ALIGN="left">
+				<SELECT NAME="p_movie">
+				<OPTION VALUE="truth">The Undiscovered Truth</OPTION>
+				<OPTION VALUE="million">Millions of miles away</OPTION>
+				<OPTION VALUE="captain">Captain Fantastic</OPTION>
+				<OPTION VALUE="guarded">Guarded</OPTION>
+				</SELECT></TD></TR>
+				<TR><TD>Time:</TD>
+				<TD ALIGN="left">
+				<SELECT NAME="p_time">
+				<OPTION VALUE="morn">10:30 A.M.</OPTION>
+				<OPTION VALUE="eve">4:00 P.M.</OPTION>
+				</SELECT></TD></TR>
+				<TR><TD><INPUT TYPE="submit" NAME="p_submit" VALUE="SELECT SEATS"/></TD></TR>
+			</TABLE></CENTER>
+      <input type="hidden" name="p_user" value="<%=p_user%>">
+		</FORM>
+	</BODY>
+</HTML>

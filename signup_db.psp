@@ -1,0 +1,20 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="signup_db" %>
+<%@ plsql parameter="p_name" default="NULL" %>
+<%@ plsql parameter="p_user" default="NULL" %>
+<%@ plsql parameter="p_pwd" default="NULL" %>
+<%@ plsql parameter="p_email" default="NULL" %>
+<%@ plsql parameter="p_submit" default="NULL" %>
+<HTML>
+	<HEAD>
+		<TITLE>MovieZ Ticket Booking System</TITLE> 
+	</HEAD>
+	<BODY>
+		Hi <%=p_user%>
+   <%
+   BEGIN
+   INSERT INTO REGISTER VALUES(p_name,p_user,p_pwd,p_email);
+   END;
+   %>
+	</BODY>
+</HTML>

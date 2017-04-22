@@ -1,0 +1,33 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="signin_db" %>
+<%@ plsql parameter="p_user" default="NULL" %>
+<%@ plsql parameter="p_pwd" default="NULL" %>
+<%@ plsql parameter="p_submit" default="NULL" %>
+<HTML>
+	<HEAD>
+		<TITLE>MovieZ Ticket Booking System</TITLE> 
+	</HEAD>
+	<%!
+	p_uname varchar2(25);
+	p_pass varchar2(25);
+	%>
+	<BODY>
+		
+   <%
+   BEGIN
+   SELECT userid,pwd INTO p_uname,p_pass FROM register where userid=p_user;
+   
+   IF p_uname=p_user AND p_pass=p_pwd THEN
+   %>
+   <script type="text/javascript">window.open("choose?p_user=<%=p_user%>","_self");</script>
+   <%
+   ELSE
+   %>
+   <script type="text/javascript">window.alert("User ID or Password doesn't match. Please Re-enter!");
+   window.open('signin',"_self");</script>
+   <%
+   END IF;
+   END;
+   %>
+	</BODY>
+</HTML>

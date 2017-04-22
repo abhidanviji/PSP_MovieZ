@@ -1,0 +1,31 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="book" %>
+<%@ plsql parameter="p_movie" default="NULL" %>
+<%@ plsql parameter="p_time" default="NULL" %>
+<%@ plsql parameter="p_user" default="NULL" %>
+<%@ plsql parameter="a1" default="NULL" %>
+<%@ plsql parameter="a2" default="NULL" %>
+<%@ plsql parameter="a3" default="NULL" %>
+<%@ plsql parameter="a4" default="NULL" %>
+<%@ plsql parameter="a5" default="NULL" %>
+<%@ plsql parameter="a6" default="NULL" %>
+<%@ plsql parameter="b1" default="NULL" %>
+<%@ plsql parameter="b2" default="NULL" %>
+<%@ plsql parameter="b3" default="NULL" %>
+<%@ plsql parameter="b4" default="NULL" %>
+<%@ plsql parameter="b5" default="NULL" %>
+<%@ plsql parameter="b6" default="NULL" %>
+<%@ plsql parameter="b7" default="NULL" %>
+<%@ plsql parameter="b8" default="NULL" %>
+<%@ plsql parameter="b9" default="NULL" %>
+<%@ plsql parameter="p_submit" default="NULL" %>
+<HTML>
+	<HEAD>
+
+		<TITLE>MovieZ Ticket Booking System</TITLE> 
+	</HEAD>
+	
+	<BODY>
+    
+	</BODY>
+</HTML>
