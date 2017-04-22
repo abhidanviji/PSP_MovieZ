@@ -89,51 +89,51 @@ body {
 			<TABLE CELLSPACING="2" BORDER="0" >
 			
 				<TR><TD><label>
-				<input type="checkbox" name = "a1" class="check" id = "p_check" value="a1" <%if p_a1 IS NOT NULL then%>checked<%end if;%>><span>A1</span>
+				<input type="checkbox" name = "p_a1" class="check" id = "p_check" value="a1" <%if p_a1 IS NOT NULL then%>disabled="disabled" checked="checked"<%end if;%>><span>A1</span>
 				</label></TD>
         <TD><label>
-				<input type="checkbox" name = "a2" class="check" id = "p_check" value="a2" <%if p_a2 IS NOT NULL then%>checked<%end if;%>><span>A2</span>
+				<input type="checkbox" name = "p_a2" class="check" id = "p_check" value="a2" <%if p_a2 IS NOT NULL then%>disabled="disabled" checked="checked"<%end if;%>><span>A2</span>
 				</label></TD>
         <TD><label>
-				<input type="checkbox" name = "a3" class="check" id = "p_check" value="a3" <%if p_a3 IS NOT NULL then%>checked<%end if;%>><span>A3</span>
+				<input type="checkbox" name = "p_a3" class="check" id = "p_check" value="a3" <%if p_a3 IS NOT NULL then%>disabled="disabled" checked="checked"<%end if;%>><span>A3</span>
 				</label></TD>
         <TD></TD><TD></TD><TD></TD>
         <TD><label>
-				<input type="checkbox" name = "a4" class="check" id = "p_check" value="a4" <%if p_a4 IS NOT NULL then%>checked<%end if;%>><span>A4</span>
+				<input type="checkbox" name = "p_a4" class="check" id = "p_check" value="a4" <%if p_a4 IS NOT NULL then%>disabled="disabled" checked="checked"<%end if;%>><span>A4</span>
 				</label></TD>
         <TD><label>
-        <input type="checkbox" name = "a5" class="check" id = "p_check" value="a5" <%if p_a5 IS NOT NULL then%>checked<%end if;%>><span>A5</span>
+        <input type="checkbox" name = "p_a5" class="check" id = "p_check" value="a5" <%if p_a5 IS NOT NULL then%>disabled="disabled" checked="checked"<%end if;%>><span>A5</span>
 				</label></TD>
 				<TD><label>
-				<input type="checkbox" name = "a6" class="check" id = "p_check" value="a6" <%if p_a6 IS NOT NULL then%>checked<%end if;%>><span>A6</span>
+				<input type="checkbox" name = "p_a6" class="check" id = "p_check" value="a6" <%if p_a6 IS NOT NULL then%>disabled="disabled" checked="checked"<%end if;%>><span>A6</span>
 				</label></TD></TR>
         
         <TR><TD><label>
-				<input type="checkbox" name = "b1" class="check" id = "p_check" value="b1" <%if p_b1 IS NOT NULL then%>checked<%end if;%>><span>B1</span>
+				<input type="checkbox" name = "p_b1" class="check" id = "p_check" value="b1" <%if p_b1 IS NOT NULL then%>disabled="disabled" checked="checked"<%end if;%>><span>B1</span>
 				</label></TD>
         <TD><label>
-				<input type="checkbox" name = "b2" class="check" id = "p_check" value="b2" <%if p_b2 IS NOT NULL then%>checked<%end if;%>><span>B2</span>
+				<input type="checkbox" name = "p_b2" class="check" id = "p_check" value="b2" <%if p_b2 IS NOT NULL then%>disabled="disabled" checked="checked"<%end if;%>><span>B2</span>
 				</label></TD>
         <TD><label>
-				<input type="checkbox" name = "b3" class="check" id = "p_check" value="b3" <%if p_b3 IS NOT NULL then%>checked<%end if;%>><span>B3</span>
+				<input type="checkbox" name = "p_b3" class="check" id = "p_check" value="b3" <%if p_b3 IS NOT NULL then%>disabled="disabled" checked="checked"<%end if;%>><span>B3</span>
 				</label></TD>
         <TD><label>
-				<input type="checkbox" name = "b4" class="check" id = "p_check" value="b4" <%if p_b4 IS NOT NULL then%>checked<%end if;%>><span>B4</span>
+				<input type="checkbox" name = "p_b4" class="check" id = "p_check" value="b4" <%if p_b4 IS NOT NULL then%>disabled="disabled" checked="checked"<%end if;%>><span>B4</span>
 				</label></TD>
         <TD><label>
-        <input type="checkbox" name = "b5" class="check" id = "p_check" value="b5" <%if p_b5 IS NOT NULL then%>checked<%end if;%>><span>B5</span>
+        <input type="checkbox" name = "p_b5" class="check" id = "p_check" value="b5" <%if p_b5 IS NOT NULL then%>disabled="disabled" checked="checked"<%end if;%>><span>B5</span>
 				</label></TD>
 				<TD><label>
-				<input type="checkbox" name = "b6" class="check" id = "p_check" value="b6" <%if p_b6 IS NOT NULL then%>checked<%end if;%>><span>B6</span>
+				<input type="checkbox" name = "p_b6" class="check" id = "p_check" value="b6" <%if p_b6 IS NOT NULL then%>disabled="disabled" checked="checked"<%end if;%>><span>B6</span>
 				</label></TD>
         <TD><label>
-				<input type="checkbox" name = "b7" class="check" id = "p_check" value="b7" <%if p_b7 IS NOT NULL then%>checked<%end if;%>><span>B7</span>
+				<input type="checkbox" name = "p_b7" class="check" id = "p_check" value="b7" <%if p_b7 IS NOT NULL then%>disabled="disabled" checked="checked"<%end if;%>><span>B7</span>
 				</label></TD>
         <TD><label>
-        <input type="checkbox" name = "b8" class="check" id = "p_check" value="b8" <%if p_b8 IS NOT NULL then%>checked<%end if;%>><span>B8</span>
+        <input type="checkbox" name = "p_b8" class="check" id = "p_check" value="b8" <%if p_b8 IS NOT NULL then%>disabled="disabled" checked="checked"<%end if;%>><span>B8</span>
 				</label></TD>
 				<TD><label>
-				<input type="checkbox" name = "b9" class="check" id = "p_check" value="b9" <%if p_b9 IS NOT NULL then%>checked<%end if;%>><span>B9</span>
+				<input type="checkbox" name = "p_b9" class="check" id = "p_check" value="b9" <%if p_b9 IS NOT NULL then%>disabled="disabled" checked="checked"<%end if;%>><span>B9</span>
 				</label></TD></TR>
 			</TABLE>
         <input type="hidden" name="p_movie" value="<%=p_movie%>">

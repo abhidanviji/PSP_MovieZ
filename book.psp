@@ -3,29 +3,107 @@
 <%@ plsql parameter="p_movie" default="NULL" %>
 <%@ plsql parameter="p_time" default="NULL" %>
 <%@ plsql parameter="p_user" default="NULL" %>
-<%@ plsql parameter="a1" default="NULL" %>
-<%@ plsql parameter="a2" default="NULL" %>
-<%@ plsql parameter="a3" default="NULL" %>
-<%@ plsql parameter="a4" default="NULL" %>
-<%@ plsql parameter="a5" default="NULL" %>
-<%@ plsql parameter="a6" default="NULL" %>
-<%@ plsql parameter="b1" default="NULL" %>
-<%@ plsql parameter="b2" default="NULL" %>
-<%@ plsql parameter="b3" default="NULL" %>
-<%@ plsql parameter="b4" default="NULL" %>
-<%@ plsql parameter="b5" default="NULL" %>
-<%@ plsql parameter="b6" default="NULL" %>
-<%@ plsql parameter="b7" default="NULL" %>
-<%@ plsql parameter="b8" default="NULL" %>
-<%@ plsql parameter="b9" default="NULL" %>
+<%@ plsql parameter="p_a1" default="NULL" %>
+<%@ plsql parameter="p_a2" default="NULL" %>
+<%@ plsql parameter="p_a3" default="NULL" %>
+<%@ plsql parameter="p_a4" default="NULL" %>
+<%@ plsql parameter="p_a5" default="NULL" %>
+<%@ plsql parameter="p_a6" default="NULL" %>
+<%@ plsql parameter="p_b1" default="NULL" %>
+<%@ plsql parameter="p_b2" default="NULL" %>
+<%@ plsql parameter="p_b3" default="NULL" %>
+<%@ plsql parameter="p_b4" default="NULL" %>
+<%@ plsql parameter="p_b5" default="NULL" %>
+<%@ plsql parameter="p_b6" default="NULL" %>
+<%@ plsql parameter="p_b7" default="NULL" %>
+<%@ plsql parameter="p_b8" default="NULL" %>
+<%@ plsql parameter="p_b9" default="NULL" %>
 <%@ plsql parameter="p_submit" default="NULL" %>
 <HTML>
 	<HEAD>
 
 		<TITLE>MovieZ Ticket Booking System</TITLE> 
+   <%!
+   p_seats varchar2(50):='';
+   p_count integer:=0;
+
+   %>
 	</HEAD>
 	
 	<BODY>
+  
+  <%
+  BEGIN
+   if p_a1 is not null then
+   UPDATE TICKETS SET a1=p_a1 WHERE mname=p_movie and mtime=p_time;
+   p_seats := p_seats||' '||p_a1;
+   end if;
+   if p_a2 is not null then
+   UPDATE TICKETS SET a2=p_a2 WHERE mname=p_movie and mtime=p_time;
+   p_seats := p_seats||' '||p_a2;
+   end if;
+   if p_a3 is not null then
+   UPDATE TICKETS SET a3=p_a3 WHERE mname=p_movie and mtime=p_time;
+   p_seats := p_seats||' '||p_a3;
+   end if;
+   if p_a4 is not null then
+   UPDATE TICKETS SET a4=p_a4 WHERE mname=p_movie and mtime=p_time;
+   p_seats := p_seats||' '||p_a4;
+   end if;
+   if p_a5 is not null then
+   UPDATE TICKETS SET a5=p_a5 WHERE mname=p_movie and mtime=p_time;
+   p_seats := p_seats||' '||p_a5;
+   end if;
+   if p_a6 is not null then
+   UPDATE TICKETS SET a6=p_a6 WHERE mname=p_movie and mtime=p_time;
+   p_seats := p_seats||' '||p_a6;
+   end if;
+   END;
+   if p_b1 is not null then
+   UPDATE TICKETS SET b1=p_b1 WHERE mname=p_movie and mtime=p_time;
+   p_seats := p_seats||' '||p_b1;
+   end if;
+   if p_b2 is not null then
+   UPDATE TICKETS SET b2=p_b2 WHERE mname=p_movie and mtime=p_time;
+   p_seats := p_seats||' '||p_b2;
+   end if;
+   if p_b3 is not null then
+   UPDATE TICKETS SET b3=p_b3 WHERE mname=p_movie and mtime=p_time;
+   p_seats := p_seats||' '||p_b3;
+   end if;
+   if p_b4 is not null then
+   UPDATE TICKETS SET b4=p_b4 WHERE mname=p_movie and mtime=p_time;
+   p_seats := p_seats||' '||p_b4;
+   end if;
+   if p_b5 is not null then
+   UPDATE TICKETS SET b5=p_b5 WHERE mname=p_movie and mtime=p_time;
+   p_seats := p_seats||' '||p_b5;
+   end if;
+   if p_b6 is not null then
+   UPDATE TICKETS SET b6=p_b6 WHERE mname=p_movie and mtime=p_time;
+   p_seats := p_seats||' '||p_b6;
+   end if;
+   if p_b7 is not null then
+   UPDATE TICKETS SET b7=p_b7 WHERE mname=p_movie and mtime=p_time;
+   p_seats := p_seats||' '||p_b7;
+   end if;
+   if p_b8 is not null then
+   UPDATE TICKETS SET b8=p_b8 WHERE mname=p_movie and mtime=p_time;
+   p_seats := p_seats||' '||p_b8;
+   end if;
+   if p_b9 is not null then
+   UPDATE TICKETS SET b9=p_b9 WHERE mname=p_movie and mtime=p_time;
+   p_seats := p_seats||' '||p_b9;
+   end if;
+   
+   select count(*) into p_count from booking where userid=p_user and mname=p_movie and mtime=p_time and seats=p_seats;
+   
+   if p_count=0 then
+   INSERT INTO BOOKING VALUES (p_user,p_movie,p_time,p_seats);
+   end if;
+   %>
+   
+   
     
 	</BODY>
 </HTML>
