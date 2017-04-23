@@ -29,6 +29,12 @@ i integer;
    window.open('signup',"_self");</script>
    <%
    end if;
+   EXCEPTION 
+   WHEN OTHERS THEN
+   %>
+   <script type="text/javascript">window.alert("Something went wrong. Please Re-enter!");
+   window.open('signup',"_self");</script>
+   <%
    END;
    %>
 	</BODY>

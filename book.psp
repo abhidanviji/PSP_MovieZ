@@ -102,6 +102,7 @@
    if p_count=0 then
    INSERT INTO BOOKING VALUES (p_user,p_movie,p_time,p_seats);
    end if;
+   
    %>
    <CENTER><H2>Booking Successfull!!</H2>
    <FORM ACTION="viewtickets" METHOD="post">
