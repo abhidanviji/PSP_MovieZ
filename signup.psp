@@ -3,9 +3,55 @@
 <HTML>
 	<HEAD>
 		<TITLE>MovieZ Ticket Booking System</TITLE> 
+   <style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 10%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+body   {
+      font-family: Comic Sans MS;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 125px;
+}
+</style>
 	</HEAD>
 	<BODY>
- <A HREF="signin" style="float:right;">Back</A>
+ <div>
+ <h3><A HREF="signin" style="position: absolute; top: 15px; right: 15px; text-align: right;">Back</A></h3>
+ <CENTER><H4> Enter you details below!! </H4></CENTER>
 		<FORM ACTION="signup_db" METHOD="post">
 			<CENTER><TABLE CELLSPACING="2" BORDER="0">
 				<TR><TD>NAME:</TD><TD ALIGN="left"><INPUT TYPE="text" SIZE="25" NAME="p_name"/></TD></TR>
@@ -16,5 +62,6 @@
 			</TABLE>
         <INPUT TYPE="submit" NAME="p_submit" VALUE="SIGN UP"/></CENTER>
 		</FORM>
+   </div>
 	</BODY>
 </HTML>

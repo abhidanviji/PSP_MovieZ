@@ -4,9 +4,55 @@
 <HTML>
 	<HEAD>
 		<TITLE>MovieZ Ticket Booking System</TITLE> 
+   <style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 20%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+body   {
+      font-family: Comic Sans MS;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 150px;
+}
+</style>
 	</HEAD>
 	<BODY>
- <A HREF="signin" style="float:right;">Log Out</A>
+ <div>
+ <h3><A HREF="signin" style="position: absolute; top: 15px; right: 15px; text-align: right;">Log Out</A></h3>
+ <CENTER><H4> Choose your Favourite!! </H4></CENTER>
 		<FORM ACTION="ticket" METHOD="post">
 			<CENTER><TABLE CELLSPACING="2" BORDER="0">
 				<TR><TD>Movie:</TD>
@@ -33,5 +79,6 @@
      <INPUT TYPE="submit" value="VIEW TICKETS">
      <INPUT TYPE="hidden" NAME="p_user" value=<%=p_user%>>
    </FORM></CENTER>
+   </div>
 	</BODY>
 </HTML>

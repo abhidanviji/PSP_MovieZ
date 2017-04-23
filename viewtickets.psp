@@ -4,13 +4,58 @@
 <HTML>
 	<HEAD>
 		<TITLE>MovieZ Ticket Booking System</TITLE> 
+     <style>
+     input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 10%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+body   {
+      font-family: Comic Sans MS;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 200px;
+}
+     </style>
 		<%!
 		cursor cur_tic is select mname,mtime,seats from booking where userid=p_user;
 		i integer:=0;
 		%>
 	</HEAD>
 	<BODY>
- <A HREF="signin" style="float:right;">Log Out</A>
+ <div>
+ <h3><A HREF="signin" style="position: absolute; top: 15px; right: 15px; text-align: right;">Log Out</A></h3>
 		<CENTER><H2>Ticket List</H2></CENTER>
    <%
 		for tic in cur_tic loop
@@ -24,5 +69,6 @@
 			<%
 		end loop;
 		%>
+   </div>
 	</BODY>
 </HTML>

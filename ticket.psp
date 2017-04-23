@@ -7,12 +7,53 @@
 <HTML>
 	<HEAD>
 	     <style>
+           input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 10%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+body   {
+      font-family: Comic Sans MS;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 75px;
+}
            div label input {
    margin-right:100px;
+   padding: 5px;
 }
-body {
-    font-family:sans-serif;
-}
+
 
 #ck-button {
 
@@ -82,11 +123,13 @@ body {
    %>
 	</HEAD>
 	<BODY>
- <A HREF="signin" style="float:right;">Log Out</A>
+ <div>
+ <h3><A HREF="signin" style="position: absolute; top: 15px; right: 15px; text-align: right;">Log Out</A></h3>
  <%select a1,a2,a3,a4,a5,a6,b1,b2,b3,b4,b5,b6,b7,b8,b9 into p_a1,p_a2,p_a3,p_a4,p_a5,p_a6,p_b1,p_b2,p_b3,p_b4,p_b5,p_b6,p_b7,p_b8,p_b9 from tickets where mname=p_movie and mtime=p_time;%>
 		<FORM ACTION="book" METHOD="post">
 			<CENTER>
 			<div id="ck-button">
+      <h3><------ Screen This Way ------></h3><BR><BR>
 			<TABLE CELLSPACING="2" BORDER="0" >
 			
 				<TR><TD><label>
@@ -139,16 +182,17 @@ body {
 			</TABLE>
         <input type="hidden" name="p_movie" value="<%=p_movie%>">
         <input type="hidden" name="p_time" value="<%=p_time%>">
-        <input type="hidden" name="p_user" value="<%=p_user%>">
+        <input type="hidden" name="p_user" value="<%=p_user%>"><BR><BR>
       <INPUT TYPE="submit" NAME="p_submit" VALUE="BOOK"/>
-      
-   
     
         	</div>
+         
         
+      
+      <input type="button" style="background-color:#EFEFEF; border:1px solid #111111;"> - Available 
+      <input type="button" style="background-color:#6d0505; border:1px solid #111111;"> - Booked
       </CENTER>
-      
-      
 		</FORM>
+   </div
 	</BODY>
 </HTML>
