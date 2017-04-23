@@ -1,0 +1,28 @@
+<%@ page language="PL/SQL" %>
+<%@ plsql procedure="viewtickets" %>
+<%@ plsql parameter="p_user" default="NULL" %>
+<HTML>
+	<HEAD>
+		<TITLE>MovieZ Ticket Booking System</TITLE> 
+		<%!
+		cursor cur_tic is select mname,mtime,seats from booking where userid=p_user;
+		i integer:=0;
+		%>
+	</HEAD>
+	<BODY>
+		<CENTER><H2>Ticket List</H2>
+		<TABLE CELLSPACING="1" BORDER="1">
+		<%
+		for tic in cur_tic loop
+		%>
+			<TR><TD>MOVIE:</TD><TD><%=tic.mname%></TD>
+			<TD>SHOW TIME:</TD><TD><%=tic.mtime%></TD>
+			<TD>SEATS:</TD><TD><%=tic.seats%></TD></TR>
+			<BR>
+		<%
+		end loop;
+		%>
+		</TABLE></CENTER>
+		
+	</BODY>
+</HTML>

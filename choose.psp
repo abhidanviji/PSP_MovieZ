@@ -6,21 +6,21 @@
 		<TITLE>MovieZ Ticket Booking System</TITLE> 
 	</HEAD>
 	<BODY>
-		<FORM ACTION="ticket" METHOD="post">
+		<FORM ACTION="ticket">
 			<CENTER><TABLE CELLSPACING="2" BORDER="0">
 				<TR><TD>Movie:</TD>
 				<TD ALIGN="left">
 				<SELECT NAME="p_movie">
-				<OPTION VALUE="truth">The Undiscovered Truth</OPTION>
-				<OPTION VALUE="million">Millions of miles away</OPTION>
-				<OPTION VALUE="captain">Captain Fantastic</OPTION>
-				<OPTION VALUE="guarded">Guarded</OPTION>
+				<OPTION VALUE="TheUndiscoveredTruth">The Undiscovered Truth</OPTION>
+				<OPTION VALUE="MillionsOfMilesAway">Millions of miles away</OPTION>
+				<OPTION VALUE="CaptainFantastic">Captain Fantastic</OPTION>
+				<OPTION VALUE="Guarded">Guarded</OPTION>
 				</SELECT></TD></TR>
 				<TR><TD>Time:</TD>
 				<TD ALIGN="left">
 				<SELECT NAME="p_time">
-				<OPTION VALUE="morn">10:30 A.M.</OPTION>
-				<OPTION VALUE="eve">4:00 P.M.</OPTION>
+				<OPTION VALUE="Morning">10:30 A.M.</OPTION>
+				<OPTION VALUE="Evening">4:00 P.M.</OPTION>
 				</SELECT></TD></TR>
 				<TR><TD><INPUT TYPE="submit" NAME="p_submit" VALUE="SELECT SEATS"/></TD></TR>
 			</TABLE></CENTER>

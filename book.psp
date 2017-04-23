@@ -102,8 +102,9 @@
    INSERT INTO BOOKING VALUES (p_user,p_movie,p_time,p_seats);
    end if;
    %>
-   
-   
-    
+   <FORM ACTION="viewtickets" METHOD="post">
+     <INPUT TYPE="submit" value="VIEW TICKETS">
+     <INPUT TYPE="hidden" NAME="p_user" value=<%=p_user%>>
+   </FORM>
 	</BODY>
 </HTML>
