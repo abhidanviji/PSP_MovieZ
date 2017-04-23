@@ -6,7 +6,8 @@
 		<TITLE>MovieZ Ticket Booking System</TITLE> 
 	</HEAD>
 	<BODY>
-		<FORM ACTION="ticket">
+ <A HREF="signin" style="float:right;">Log Out</A>
+		<FORM ACTION="ticket" METHOD="post">
 			<CENTER><TABLE CELLSPACING="2" BORDER="0">
 				<TR><TD>Movie:</TD>
 				<TD ALIGN="left">
@@ -22,9 +23,15 @@
 				<OPTION VALUE="Morning">10:30 A.M.</OPTION>
 				<OPTION VALUE="Evening">4:00 P.M.</OPTION>
 				</SELECT></TD></TR>
-				<TR><TD><INPUT TYPE="submit" NAME="p_submit" VALUE="SELECT SEATS"/></TD></TR>
-			</TABLE></CENTER>
+			</TABLE>
+      <INPUT TYPE="submit" NAME="p_submit" VALUE="SELECT SEATS"/>
+      </CENTER>
       <input type="hidden" name="p_user" value="<%=p_user%>">
 		</FORM>
+   <CENTER>
+   <FORM ACTION="viewtickets" METHOD="post">
+     <INPUT TYPE="submit" value="VIEW TICKETS">
+     <INPUT TYPE="hidden" NAME="p_user" value=<%=p_user%>>
+   </FORM></CENTER>
 	</BODY>
 </HTML>

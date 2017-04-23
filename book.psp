@@ -31,6 +31,7 @@
 	</HEAD>
 	
 	<BODY>
+ <A HREF="signin" style="float:right;">Log Out</A>
   
   <%
   BEGIN
@@ -102,9 +103,10 @@
    INSERT INTO BOOKING VALUES (p_user,p_movie,p_time,p_seats);
    end if;
    %>
+   <CENTER><H2>Booking Successfull!!</H2>
    <FORM ACTION="viewtickets" METHOD="post">
      <INPUT TYPE="submit" value="VIEW TICKETS">
      <INPUT TYPE="hidden" NAME="p_user" value=<%=p_user%>>
-   </FORM>
+   </FORM></CENTER>
 	</BODY>
 </HTML>

@@ -10,6 +10,7 @@
 		%>
 	</HEAD>
 	<BODY>
+ <A HREF="signin" style="float:right;">Log Out</A>
 		<CENTER><H2>Ticket List</H2></CENTER>
    <%
 		for tic in cur_tic loop
