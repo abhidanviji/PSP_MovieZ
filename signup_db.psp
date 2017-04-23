@@ -5,6 +5,9 @@
 <%@ plsql parameter="p_pwd" default="NULL" %>
 <%@ plsql parameter="p_email" default="NULL" %>
 <%@ plsql parameter="p_submit" default="NULL" %>
+<%!
+i integer;
+%>
 <HTML>
 	<HEAD>
 		<TITLE>MovieZ Ticket Booking System</TITLE> 
@@ -14,6 +17,18 @@
    <%
    BEGIN
    INSERT INTO REGISTER VALUES(p_name,p_user,p_pwd,p_email);
+   i:=sql%rowcount;
+   if i>0 then
+   %>
+   <script type="text/javascript">window.alert("Sign Up Successfull. Please Log In!");
+   window.open('signin',"_self");</script>
+   <%
+   else
+   %>
+    <script type="text/javascript">window.alert("Something went wrong. Try Again!");
+   window.open('signup',"_self");</script>
+   <%
+   end if;
    END;
    %>
 	</BODY>
