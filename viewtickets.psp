@@ -10,19 +10,18 @@
 		%>
 	</HEAD>
 	<BODY>
-		<CENTER><H2>Ticket List</H2>
-		<TABLE CELLSPACING="1" BORDER="1">
-		<%
+		<CENTER><H2>Ticket List</H2></CENTER>
+   <%
 		for tic in cur_tic loop
 		%>
-			<TR><TD>MOVIE:</TD><TD><%=tic.mname%></TD>
-			<TD>SHOW TIME:</TD><TD><%=tic.mtime%></TD>
-			<TD>SEATS:</TD><TD><%=tic.seats%></TD></TR>
+		<CENTER><TABLE CELLSPACING="4" BORDER="1">
+			<TR><TD>MOVIE:</TD><TD><%=tic.mname%></TD></TR>
+			<TR><TD>SHOW TIME:</TD><TD><%if tic.mtime='Morning' then%>10:30 A.M.<%else%>4:00 P.M.<%end if;%></TD></TR>
+			<TR><TD>SEATS:</TD><TD><%=tic.seats%></TD></TR>
 			<BR>
-		<%
+		</TABLE></CENTER>
+			<%
 		end loop;
 		%>
-		</TABLE></CENTER>
-		
 	</BODY>
 </HTML>
