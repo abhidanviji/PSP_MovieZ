@@ -37,6 +37,11 @@ input[type=submit] {
     cursor: pointer;
 }
 
+input[type=checkbox] {
+    background-color:#c6c4c4;
+    border:1px solid #111111;
+}
+
 input[type=submit]:hover {
     background-color: #45a049;
 }
@@ -71,6 +76,8 @@ div {
 }
 
 #ck-button label span {
+background-color:#c6c4c4;
+    border:1px solid #111111;
     text-align:center;
     padding:3px 0px;
     display:block;
@@ -189,7 +196,7 @@ div {
          
         
       
-      <input type="button" style="background-color:#EFEFEF; border:1px solid #111111;"> - Available 
+      <input type="button" style="background-color:#c6c4c4; border:1px solid #111111;"> - Available 
       <input type="button" style="background-color:#6d0505; border:1px solid #111111;"> - Booked
       </CENTER>
 		</FORM>

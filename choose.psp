@@ -52,7 +52,7 @@ div {
 	<BODY>
  <div>
  <h3><A HREF="signin" style="position: absolute; top: 15px; right: 15px; text-align: right;">Log Out</A></h3>
- <CENTER><H4> Choose your Favourite!! </H4></CENTER>
+ <CENTER><H4> Choose your Favourite Movie!! </H4></CENTER>
 		<FORM ACTION="ticket" METHOD="post">
 			<CENTER><TABLE CELLSPACING="2" BORDER="0">
 				<TR><TD>Movie:</TD>

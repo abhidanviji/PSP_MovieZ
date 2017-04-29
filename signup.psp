@@ -51,7 +51,9 @@ div {
 	<BODY>
  <div>
  <h3><A HREF="signin" style="position: absolute; top: 15px; right: 15px; text-align: right;">Back</A></h3>
- <CENTER><H4> Enter you details below!! </H4></CENTER>
+ <CENTER>
+ <H3> New User Registration</H3>
+ <H4> Enter you details below!! </H4></CENTER>
 		<FORM ACTION="signup_db" METHOD="post">
 			<CENTER><TABLE CELLSPACING="2" BORDER="0">
 				<TR><TD>NAME:</TD><TD ALIGN="left"><INPUT TYPE="text" SIZE="25" NAME="p_name"/></TD></TR>
